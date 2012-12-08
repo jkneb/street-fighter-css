@@ -1,8 +1,8 @@
 var $ken = $('.ken');
 $(document).on('keydown keyup', function(e) {
     if (e.type == 'keydown') { 
-        // h
-        if (e.keyCode == 72 
+        // s - hadoken
+        if (e.keyCode == 83 
             && !$ken.hasClass('hadoken') 
             && !$ken.hasClass('punch') 
             && !$ken.hasClass('kick') 
@@ -21,8 +21,8 @@ $(document).on('keydown keyup', function(e) {
             }, (250));
         }
     
-        // p
-        if (e.keyCode == 80 
+        // a - punch
+        if (e.keyCode == 65 
             && !$ken.hasClass('punch') 
             && !$ken.hasClass('hadoken')
         ) { 
@@ -30,16 +30,16 @@ $(document).on('keydown keyup', function(e) {
             setTimeout(function() { $ken.removeClass('punch'); }, 150); 
         }
     
-        // k
-        if (e.keyCode == 75 
+        // e - kick
+        if (e.keyCode == 69 
             && !$ken.hasClass('kick') 
             && !$ken.hasClass('hadoken')
         ) { 
             $ken.addClass('kick');
             setTimeout(function() { $ken.removeClass('kick'); }, 500); 
         }
-        // j
-        if (e.keyCode == 74 
+        // r - reverse kick
+        if (e.keyCode == 82 
             && !$ken.hasClass('reversekick') 
             && !$ken.hasClass('kick') 
             && !$ken.hasClass('hadoken')
@@ -47,29 +47,34 @@ $(document).on('keydown keyup', function(e) {
             $ken.addClass('reversekick');
             setTimeout(function() { $ken.removeClass('reversekick'); }, 500); 
         }
-        // space
-        if (e.keyCode == 32 
+        // up
+        if (e.keyCode == 38 
+            && !$ken.hasClass('jump') 
             && !$ken.hasClass('reversekick') 
             && !$ken.hasClass('kick') 
             && !$ken.hasClass('hadoken')
         ) { 
             $ken.addClass('jump');
-            setTimeout(function() { $ken.removeClass('jump'); }, 500); 
+            setTimeout(function() { $ken.addClass('down'); }, 500); 
+            setTimeout(function() { $ken.removeClass('jump down'); }, 1000); 
+        }
+    
+    
+        // ← flip 
+        if (e.keyCode == 37) $ken.addClass('flip');
+        // → unflip 
+        if (e.keyCode == 39) $ken.removeClass('flip');
+        // ←← →→ walking
+        if (e.type == 'keydown' && (e.keyCode == 37 || e.keyCode == 39)) { 
+            if ($ken.hasClass('flip')) 
+                $ken.addClass('walk').css({ marginLeft:'-=10px' });
+            else 
+                $ken.addClass('walk').css({ marginLeft:'+=10px' });
         }
     }
-    
-    // ← flip 
-    if (e.keyCode == 37) $ken.addClass('flip');
-    // → unflip 
-    if (e.keyCode == 39) $ken.removeClass('flip');
-    // ←← →→ walking
-    if (e.type == 'keydown' && (e.keyCode == 37 || e.keyCode == 39)) { 
-        if ($ken.hasClass('flip')) 
-            $ken.addClass('walk').css({ marginLeft:'-=10px' });
-        else 
-            $ken.addClass('walk').css({ marginLeft:'+=10px' });
+    else { // keyup
+        $ken.removeClass('walk');
     }
-    else $ken.removeClass('walk');
 
     console.log(e.keyCode);
 });

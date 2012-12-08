@@ -314,3 +314,45 @@
 
   to {
     background-position: -350px -560px; } }
+
+/* jump */
+.jump {
+  -webkit-transition: bottom 0.5s ease-in-out;
+  -moz-transition: bottom 0.5s ease-in-out;
+  -ms-transition: bottom 0.5s ease-in-out;
+  transition: bottom 0.5s ease-in-out;
+  bottom: 150px;
+  -webkit-animation: jump steps(7) 1s infinite;
+  -moz-animation: jump steps(7) 1s infinite;
+  -ms-animation: jump steps(7) 1s infinite;
+  animation: jump steps(7) 1s infinite; }
+  .jump.down {
+    bottom: 0px; }
+
+@-webkit-keyframes jump {
+  from {
+    background-position: 0px -640px; }
+
+  to {
+    background-position: -490px -640px; } }
+
+@-moz-keyframes jump {
+  from {
+    background-position: 0px -640px; }
+
+  to {
+    background-position: -490px -640px; } }
+
+@-ms-keyframes jump {
+  from {
+    background-position: 0px -640px; }
+
+  to {
+    background-position: -490px -640px; } }
+
+@keyframes jump {
+  from {
+    background-position: 0px -640px; }
+
+  to {
+    background-position: -490px -640px; } }
