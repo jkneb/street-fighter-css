@@ -22,3 +22,13 @@
     @-ms-keyframes $name { @content }
     @keyframes $name { @content }
 }
+@mixin anim($animName, $steps, $animNbr, $animParams){
+    .#{$animName} { 
+        @content;
+        @include animation($animName steps($steps) $animParams); 
+    }
+    @include keyframes($animName) {
+        from { background-position:0px (-$spriteHeight * ($animNbr - 1)); }
+          to { background-position:-($spriteWidth * $steps) (-$spriteHeight * ($animNbr - 1)); }
+    }
+}

@@ -1,6 +1,3 @@
-div {
-  outline: 1px solid pink; }
-
 .scene {
   position: absolute;
   top: 50px;
@@ -28,6 +25,7 @@ div {
   height: 80px;
   background-image: url(../images/ken.png); }
 
+/* ken's fireball */
 .fireball {
   position: absolute;
   left: 100%;
@@ -37,10 +35,10 @@ div {
   -moz-transition: margin 1s ease;
   -ms-transition: margin 1s ease;
   transition: margin 1s ease;
-  -webkit-animation: fireball 0.15s steps(2) infinite;
-  -moz-animation: fireball 0.15s steps(2) infinite;
-  -ms-animation: fireball 0.15s steps(2) infinite;
-  animation: fireball 0.15s steps(2) infinite; }
+  -webkit-animation: fireball steps(2) 0.15s infinite;
+  -moz-animation: fireball steps(2) 0.15s infinite;
+  -ms-animation: fireball steps(2) 0.15s infinite;
+  animation: fireball steps(2) 0.15s infinite; }
   .fireball.moving {
     margin-left: 500px; }
 
@@ -72,11 +70,12 @@ div {
   to {
     background-position: -140px -320px; } }
 
-.fireball.explode {
-  -webkit-animation: explode 0.5s steps(4) 1;
-  -moz-animation: explode 0.5s steps(4) 1;
-  -ms-animation: explode 0.5s steps(4) 1;
-  animation: explode 0.5s steps(4) 1; }
+/* ken's fireball impact explosion */
+.explode {
+  -webkit-animation: explode steps(4) 0.5s 1;
+  -moz-animation: explode steps(4) 0.5s 1;
+  -ms-animation: explode steps(4) 0.5s 1;
+  animation: explode steps(4) 0.5s 1; }
 
 @-webkit-keyframes explode {
   from {
@@ -106,11 +105,12 @@ div {
   to {
     background-position: -280px -400px; } }
 
+/* stance */
 .stance {
-  -webkit-animation: stance 0.5s steps(4) infinite;
-  -moz-animation: stance 0.5s steps(4) infinite;
-  -ms-animation: stance 0.5s steps(4) infinite;
-  animation: stance 0.5s steps(4) infinite; }
+  -webkit-animation: stance steps(4) 0.5s infinite;
+  -moz-animation: stance steps(4) 0.5s infinite;
+  -ms-animation: stance steps(4) 0.5s infinite;
+  animation: stance steps(4) 0.5s infinite; }
 
 @-webkit-keyframes stance {
   from {
@@ -140,11 +140,12 @@ div {
   to {
     background-position: -280px -80px; } }
 
+/* hadoken - must be declared AFTER .stance */
 .hadoken {
-  -webkit-animation: hadoken 0.5s steps(4) infinite;
-  -moz-animation: hadoken 0.5s steps(4) infinite;
-  -ms-animation: hadoken 0.5s steps(4) infinite;
-  animation: hadoken 0.5s steps(4) infinite; }
+  -webkit-animation: hadoken steps(4) 0.5s infinite;
+  -moz-animation: hadoken steps(4) 0.5s infinite;
+  -ms-animation: hadoken steps(4) 0.5s infinite;
+  animation: hadoken steps(4) 0.5s infinite; }
 
 @-webkit-keyframes hadoken {
   from {
@@ -174,11 +175,12 @@ div {
   to {
     background-position: -280px 0px; } }
 
+/* punch */
 .punch {
-  -webkit-animation: punch 0.15s steps(3);
-  -moz-animation: punch 0.15s steps(3);
-  -ms-animation: punch 0.15s steps(3);
-  animation: punch 0.15s steps(3); }
+  -webkit-animation: punch steps(3) 0.15s infinite;
+  -moz-animation: punch steps(3) 0.15s infinite;
+  -ms-animation: punch steps(3) 0.15s infinite;
+  animation: punch steps(3) 0.15s infinite; }
 
 @-webkit-keyframes punch {
   from {
@@ -208,11 +210,12 @@ div {
   to {
     background-position: -210px -160px; } }
 
+/* walking */
 .walk {
-  -webkit-animation: walk 0.5s steps(5) infinite;
-  -moz-animation: walk 0.5s steps(5) infinite;
-  -ms-animation: walk 0.5s steps(5) infinite;
-  animation: walk 0.5s steps(5) infinite; }
+  -webkit-animation: walk steps(5) 0.5s infinite;
+  -moz-animation: walk steps(5) 0.5s infinite;
+  -ms-animation: walk steps(5) 0.5s infinite;
+  animation: walk steps(5) 0.5s infinite; }
 
 @-webkit-keyframes walk {
   from {
@@ -242,11 +245,12 @@ div {
   to {
     background-position: -350px -240px; } }
 
+/* kick */
 .kick {
-  -webkit-animation: kick 0.5s steps(5) infinite;
-  -moz-animation: kick 0.5s steps(5) infinite;
-  -ms-animation: kick 0.5s steps(5) infinite;
-  animation: kick 0.5s steps(5) infinite; }
+  -webkit-animation: kick steps(5) 0.5s infinite;
+  -moz-animation: kick steps(5) 0.5s infinite;
+  -ms-animation: kick steps(5) 0.5s infinite;
+  animation: kick steps(5) 0.5s infinite; }
 
 @-webkit-keyframes kick {
   from {
@@ -276,11 +280,12 @@ div {
   to {
     background-position: -350px -480px; } }
 
+/* reverse kick */
 .reversekick {
-  -webkit-animation: reversekick 0.5s steps(5) infinite;
-  -moz-animation: reversekick 0.5s steps(5) infinite;
-  -ms-animation: reversekick 0.5s steps(5) infinite;
-  animation: reversekick 0.5s steps(5) infinite; }
+  -webkit-animation: reversekick steps(5) 0.5s infinite;
+  -moz-animation: reversekick steps(5) 0.5s infinite;
+  -ms-animation: reversekick steps(5) 0.5s infinite;
+  animation: reversekick steps(5) 0.5s infinite; }
 
 @-webkit-keyframes reversekick {
   from {
