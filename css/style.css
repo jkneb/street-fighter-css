@@ -1,0 +1,311 @@
+div {
+  outline: 1px solid pink; }
+
+.scene {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  right: 50px;
+  bottom: 50px;
+  overflow: hidden; }
+
+.keys {
+  position: absolute;
+  padding: 0px 10px;
+  top: 0;
+  right: 0; }
+
+.flip {
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  transform: scaleX(-1); }
+
+.ken, .fireball {
+  position: absolute;
+  bottom: 0;
+  width: 70px;
+  height: 80px;
+  background-image: url(../images/ken.png); }
+
+.fireball {
+  position: absolute;
+  left: 100%;
+  margin-left: 0;
+  background-position: 140px 320px;
+  -webkit-transition: margin 1s ease;
+  -moz-transition: margin 1s ease;
+  -ms-transition: margin 1s ease;
+  transition: margin 1s ease;
+  -webkit-animation: fireball 0.15s steps(2) infinite;
+  -moz-animation: fireball 0.15s steps(2) infinite;
+  -ms-animation: fireball 0.15s steps(2) infinite;
+  animation: fireball 0.15s steps(2) infinite; }
+  .fireball.moving {
+    margin-left: 500px; }
+
+@-webkit-keyframes fireball {
+  from {
+    background-position: 0px -320px; }
+
+  to {
+    background-position: -140px -320px; } }
+
+@-moz-keyframes fireball {
+  from {
+    background-position: 0px -320px; }
+
+  to {
+    background-position: -140px -320px; } }
+
+@-ms-keyframes fireball {
+  from {
+    background-position: 0px -320px; }
+
+  to {
+    background-position: -140px -320px; } }
+
+@keyframes fireball {
+  from {
+    background-position: 0px -320px; }
+
+  to {
+    background-position: -140px -320px; } }
+
+.fireball.explode {
+  -webkit-animation: explode 0.5s steps(4) 1;
+  -moz-animation: explode 0.5s steps(4) 1;
+  -ms-animation: explode 0.5s steps(4) 1;
+  animation: explode 0.5s steps(4) 1; }
+
+@-webkit-keyframes explode {
+  from {
+    background-position: 0px -400px; }
+
+  to {
+    background-position: -280px -400px; } }
+
+@-moz-keyframes explode {
+  from {
+    background-position: 0px -400px; }
+
+  to {
+    background-position: -280px -400px; } }
+
+@-ms-keyframes explode {
+  from {
+    background-position: 0px -400px; }
+
+  to {
+    background-position: -280px -400px; } }
+
+@keyframes explode {
+  from {
+    background-position: 0px -400px; }
+
+  to {
+    background-position: -280px -400px; } }
+
+.stance {
+  -webkit-animation: stance 0.5s steps(4) infinite;
+  -moz-animation: stance 0.5s steps(4) infinite;
+  -ms-animation: stance 0.5s steps(4) infinite;
+  animation: stance 0.5s steps(4) infinite; }
+
+@-webkit-keyframes stance {
+  from {
+    background-position: 0px -80px; }
+
+  to {
+    background-position: -280px -80px; } }
+
+@-moz-keyframes stance {
+  from {
+    background-position: 0px -80px; }
+
+  to {
+    background-position: -280px -80px; } }
+
+@-ms-keyframes stance {
+  from {
+    background-position: 0px -80px; }
+
+  to {
+    background-position: -280px -80px; } }
+
+@keyframes stance {
+  from {
+    background-position: 0px -80px; }
+
+  to {
+    background-position: -280px -80px; } }
+
+.hadoken {
+  -webkit-animation: hadoken 0.5s steps(4) infinite;
+  -moz-animation: hadoken 0.5s steps(4) infinite;
+  -ms-animation: hadoken 0.5s steps(4) infinite;
+  animation: hadoken 0.5s steps(4) infinite; }
+
+@-webkit-keyframes hadoken {
+  from {
+    background-position: 0px 0px; }
+
+  to {
+    background-position: -280px 0px; } }
+
+@-moz-keyframes hadoken {
+  from {
+    background-position: 0px 0px; }
+
+  to {
+    background-position: -280px 0px; } }
+
+@-ms-keyframes hadoken {
+  from {
+    background-position: 0px 0px; }
+
+  to {
+    background-position: -280px 0px; } }
+
+@keyframes hadoken {
+  from {
+    background-position: 0px 0px; }
+
+  to {
+    background-position: -280px 0px; } }
+
+.punch {
+  -webkit-animation: punch 0.15s steps(3);
+  -moz-animation: punch 0.15s steps(3);
+  -ms-animation: punch 0.15s steps(3);
+  animation: punch 0.15s steps(3); }
+
+@-webkit-keyframes punch {
+  from {
+    background-position: 0px -160px; }
+
+  to {
+    background-position: -210px -160px; } }
+
+@-moz-keyframes punch {
+  from {
+    background-position: 0px -160px; }
+
+  to {
+    background-position: -210px -160px; } }
+
+@-ms-keyframes punch {
+  from {
+    background-position: 0px -160px; }
+
+  to {
+    background-position: -210px -160px; } }
+
+@keyframes punch {
+  from {
+    background-position: 0px -160px; }
+
+  to {
+    background-position: -210px -160px; } }
+
+.walk {
+  -webkit-animation: walk 0.5s steps(5) infinite;
+  -moz-animation: walk 0.5s steps(5) infinite;
+  -ms-animation: walk 0.5s steps(5) infinite;
+  animation: walk 0.5s steps(5) infinite; }
+
+@-webkit-keyframes walk {
+  from {
+    background-position: 0px -240px; }
+
+  to {
+    background-position: -350px -240px; } }
+
+@-moz-keyframes walk {
+  from {
+    background-position: 0px -240px; }
+
+  to {
+    background-position: -350px -240px; } }
+
+@-ms-keyframes walk {
+  from {
+    background-position: 0px -240px; }
+
+  to {
+    background-position: -350px -240px; } }
+
+@keyframes walk {
+  from {
+    background-position: 0px -240px; }
+
+  to {
+    background-position: -350px -240px; } }
+
+.kick {
+  -webkit-animation: kick 0.5s steps(5) infinite;
+  -moz-animation: kick 0.5s steps(5) infinite;
+  -ms-animation: kick 0.5s steps(5) infinite;
+  animation: kick 0.5s steps(5) infinite; }
+
+@-webkit-keyframes kick {
+  from {
+    background-position: 0px -480px; }
+
+  to {
+    background-position: -350px -480px; } }
+
+@-moz-keyframes kick {
+  from {
+    background-position: 0px -480px; }
+
+  to {
+    background-position: -350px -480px; } }
+
+@-ms-keyframes kick {
+  from {
+    background-position: 0px -480px; }
+
+  to {
+    background-position: -350px -480px; } }
+
+@keyframes kick {
+  from {
+    background-position: 0px -480px; }
+
+  to {
+    background-position: -350px -480px; } }
+
+.reversekick {
+  -webkit-animation: reversekick 0.5s steps(5) infinite;
+  -moz-animation: reversekick 0.5s steps(5) infinite;
+  -ms-animation: reversekick 0.5s steps(5) infinite;
+  animation: reversekick 0.5s steps(5) infinite; }
+
+@-webkit-keyframes reversekick {
+  from {
+    background-position: 0px -560px; }
+
+  to {
+    background-position: -350px -560px; } }
+
+@-moz-keyframes reversekick {
+  from {
+    background-position: 0px -560px; }
+
+  to {
+    background-position: -350px -560px; } }
+
+@-ms-keyframes reversekick {
+  from {
+    background-position: 0px -560px; }
+
+  to {
+    background-position: -350px -560px; } }
+
+@keyframes reversekick {
+  from {
+    background-position: 0px -560px; }
+
+  to {
+    background-position: -350px -560px; } }
