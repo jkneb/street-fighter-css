@@ -379,6 +379,41 @@ body {
   to {
     background-position: -350px -560px; } }
 
+/* kneel down */
+.kneel {
+  -webkit-animation: kneel steps(1) 0.2s infinite;
+  -moz-animation: kneel steps(1) 0.2s infinite;
+  -ms-animation: kneel steps(1) 0.2s infinite;
+  animation: kneel steps(1) 0.2s infinite; }
+
+@-webkit-keyframes kneel {
+  from {
+    background-position: 0px -720px; }
+
+  to {
+    background-position: -70px -720px; } }
+
+@-moz-keyframes kneel {
+  from {
+    background-position: 0px -720px; }
+
+  to {
+    background-position: -70px -720px; } }
+
+@-ms-keyframes kneel {
+  from {
+    background-position: 0px -720px; }
+
+  to {
+    background-position: -70px -720px; } }
+
+@keyframes kneel {
+  from {
+    background-position: 0px -720px; }
+
+  to {
+    background-position: -70px -720px; } }
+
 /* jump */
 .jump {
   -webkit-transition: bottom 0.5s cubic-bezier(0.99, 0.005, 0, 0.42);

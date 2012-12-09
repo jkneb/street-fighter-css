@@ -60,6 +60,8 @@ $spriteHeight:80px;
 @include anim($animName:kick, $steps:5, $animNbr:7, $animParams:.5s infinite);
 /* reverse kick */
 @include anim($animName:reversekick, $steps:5, $animNbr:8, $animParams:.5s infinite);
+/* kneel down */
+@include anim($animName:kneel, $steps:1, $animNbr:10, $animParams:.2s infinite);
 /* jump */
 @include anim($animName:jump, $steps:7, $animNbr:9, $animParams:1s infinite) {
     @include transition(bottom .5s cubic-bezier(0.990, 0.005, 0.000, 0.420));

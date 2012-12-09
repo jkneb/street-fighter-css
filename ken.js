@@ -20,7 +20,6 @@ $(document).on('keydown keyup', function(e) {
                     
             }, (250));
         }
-    
         // a - punch
         if (e.keyCode == 65 
             && !$ken.hasClass('punch') 
@@ -29,7 +28,6 @@ $(document).on('keydown keyup', function(e) {
             $ken.addClass('punch'); 
             setTimeout(function() { $ken.removeClass('punch'); }, 150); 
         }
-    
         // e - kick
         if (e.keyCode == 69 
             && !$ken.hasClass('kick') 
@@ -47,7 +45,7 @@ $(document).on('keydown keyup', function(e) {
             $ken.addClass('reversekick');
             setTimeout(function() { $ken.removeClass('reversekick'); }, 500); 
         }
-        // up
+        // up - jump
         if (e.keyCode == 38 
             && !$ken.hasClass('jump') 
             && !$ken.hasClass('reversekick') 
@@ -57,6 +55,16 @@ $(document).on('keydown keyup', function(e) {
             $ken.addClass('jump');
             setTimeout(function() { $ken.addClass('down'); }, 500); 
             setTimeout(function() { $ken.removeClass('jump down'); }, 1000); 
+        }
+        // down - kneel
+        if (e.keyCode == 40 
+            && !$ken.hasClass('kneel') 
+            && !$ken.hasClass('jump') 
+            && !$ken.hasClass('reversekick') 
+            && !$ken.hasClass('kick') 
+            && !$ken.hasClass('hadoken')
+        ) { 
+            $ken.addClass('kneel');
         }
     
     
@@ -73,7 +81,7 @@ $(document).on('keydown keyup', function(e) {
         }
     }
     else { // keyup
-        $ken.removeClass('walk');
+        $ken.removeClass('walk kneel');
     }
 
     console.log(e.keyCode);
