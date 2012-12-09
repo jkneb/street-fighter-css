@@ -1,11 +1,12 @@
 @import "mixins";
-@import "fonts";
 @import "keystrokes";
+@import url(http://fonts.googleapis.com/css?family=Bangers);
 
 // debug mode
 //.stage * { outline:1px solid pink; }
 
 body { background-color:black; margin:0; }
+
 .stage { 
     width:1024px; height:400px; margin:0 auto; overflow:hidden; position:relative; z-index:0;
     background:url(../images/bg.jpg) no-repeat; 
