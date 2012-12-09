@@ -78,15 +78,18 @@ body {
     content: '';
     z-index: -1;
     position: absolute;
-    bottom: -4px;
-    left: 20px;
-    right: 20px;
-    height: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
+    bottom: -2px;
+    left: 17px;
+    right: 17px;
+    height: 6px;
+    background-color: rgba(0, 0, 0, 0.4);
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
-    border-radius: 50%; }
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 5px;
+    -moz-box-shadow: 0 0 5px;
+    box-shadow: 0 0 5px; }
 
 /* ken's fireball */
 .fireball {

@@ -31,9 +31,9 @@ $spriteHeight:80px;
     
     // shadow
     &:before { 
-        content:''; z-index:-1; position:absolute; bottom:-4px; left:20px; right:20px; 
-        height:10px; background-color:rgba(0,0,0,.5); 
-        @include border-radius(50%);
+        content:''; z-index:-1; position:absolute; bottom:-2px; left:17px; right:17px; 
+        height:6px; background-color:rgba(0,0,0,.4); 
+        @include border-radius(50%); @include box-shadow(0 0 5px);
     }
 }
 
