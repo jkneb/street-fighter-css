@@ -103,6 +103,9 @@ body {
   -moz-animation: fireball steps(2) 0.15s infinite;
   -ms-animation: fireball steps(2) 0.15s infinite;
   animation: fireball steps(2) 0.15s infinite; }
+  .fireball:before {
+    left: 25px;
+    right: 25px; }
   .fireball.moving {
     margin-left: 500px; }
 

@@ -9,15 +9,20 @@ $(document).on('keydown keyup', function(e) {
             && !$ken.hasClass('reversekick')
         ) { 
             $ken.addClass('hadoken'); 
-            setTimeout(function() { $ken.removeClass('hadoken'); }, (500)); 
+            setTimeout(function() { $ken.removeClass('hadoken'); }, 500); 
             setTimeout(function() { 
-                $('<div class="fireball"/>').appendTo($ken); 
-                var delayForExplode = $('.fireball').css('transition-duration').split('s')[0]*1000; 
+                var $fireball = $('<div/>', { class:'fireball' });
+                $fireball.appendTo($ken);
+                var delayForExplode = $fireball.css('transition-duration').split('s')[0]*1000; 
                 setTimeout(function() { 
-                    $('.fireball').addClass('moving'); 
-                    setTimeout(function() { $('.fireball').addClass('explode'); }, delayForExplode); 
+                    $fireball.addClass('moving'); 
+                    setTimeout(function() { 
+                        $fireball.addClass('explode'); 
+                        setTimeout(function() { 
+                            $fireball.remove();
+                        }, 500); 
+                    }, delayForExplode); 
                 }, 20);
-                    
             }, (250));
         }
         // a - punch

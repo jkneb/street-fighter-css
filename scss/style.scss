@@ -44,6 +44,7 @@ $spriteHeight:80px;
     margin-left:0; // default margin-left
     background-position:140px 320px; // default background position
     @include transition(margin 1s ease); 
+    &:before { left:25px; right:25px; }
     &.moving { margin-left:500px; } // triggering the movement with this class
 }
 /* ken's fireball impact explosion */
