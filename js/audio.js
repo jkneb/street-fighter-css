@@ -5,12 +5,11 @@ soundManager.setup({
 
 soundManager.onready(function() {
     
-    
     var backgorundMusic = soundManager.createSound({
         id:'music',
         url:'audio/music.mp3'
     });
-    backgorundMusic.play({ volume:50 });
+    //backgorundMusic.play({ volume:50 });
     
 
     // hado/shoryu ken
@@ -33,15 +32,15 @@ soundManager.onready(function() {
     // ------------------------------- /
     soundManager.createSound({
         id:'you',
-        url:'audio/you_win-loose/you.wav'
+        url:'audio/commentator/you.wav'
     });
     soundManager.createSound({
         id:'win',
-        url:'audio/you_win-loose/win.wav'
+        url:'audio/commentator/win.wav'
     });
     soundManager.createSound({
         id:'loose',
-        url:'audio/you_win-loose/loose.wav'
+        url:'audio/commentator/loose.wav'
     });
     
 
@@ -60,6 +59,28 @@ soundManager.onready(function() {
         url:'audio/huhs/huh3.wav'
     });
 
+    // punchs
+    // ------------------------------- /
+    soundManager.createSound({
+        id:'punch',
+        url:'audio/hits/kung_fu_punch-Mike_Koenig-2097967259.mp3'
+    });
+
+    // swooshes
+    // ------------------------------- /
+    soundManager.createSound({
+        id:'swooch1',
+        url:'audio/swooshes/Swoosh 1-SoundBible.com-231145780.mp3'
+    });
+    soundManager.createSound({
+        id:'swooch2',
+        url:'audio/swooshes/Swoosh 3-SoundBible.com-1573211927.mp3'
+    });
+    soundManager.createSound({
+        id:'swooch3',
+        url:'audio/swooshes/Swooshing-SoundBible.com-1214884243.mp3'
+    });
+    
 
 });
 

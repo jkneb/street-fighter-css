@@ -10,7 +10,7 @@ $(document).on('keydown keyup', function(e) {
         ) { 
             $ken.addClass('hadoken'); 
             
-            soundManager.play('shoryu', {
+            soundManager.play('hado', {
                 multiShotEvents: true, 
                 onfinish:function() {
                     soundManager.play('ken');
@@ -39,7 +39,7 @@ $(document).on('keydown keyup', function(e) {
             && !$ken.hasClass('hadoken')
         ) { 
             $ken.addClass('punch'); 
-            //context.playSound('huh1');
+            soundManager.play('huh1');
             setTimeout(function() { $ken.removeClass('punch'); }, 150); 
         }
         // e - kick
@@ -48,7 +48,7 @@ $(document).on('keydown keyup', function(e) {
             && !$ken.hasClass('hadoken')
         ) { 
             $ken.addClass('kick');
-            //context.playSound('huh3');
+            soundManager.play('huh3');
             setTimeout(function() { $ken.removeClass('kick'); }, 500); 
         }
         // r - reverse kick
@@ -58,6 +58,7 @@ $(document).on('keydown keyup', function(e) {
             && !$ken.hasClass('hadoken')
         ) { 
             $ken.addClass('reversekick');
+            soundManager.play('huh2');
             setTimeout(function() { $ken.removeClass('reversekick'); }, 500); 
         }
         // up - jump
