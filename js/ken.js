@@ -1,8 +1,11 @@
 var $ken = $('.ken');
 $(document).on('keydown keyup', function(e) {
     if (e.type == 'keydown') { 
+        
         // s - hadoken
         if (e.keyCode == 83 
+            && !$ken.hasClass('tatsumaki') 
+            && !$ken.hasClass('shoryuken') 
             && !$ken.hasClass('hadoken') 
             && !$ken.hasClass('punch') 
             && !$ken.hasClass('kick') 
@@ -33,52 +36,104 @@ $(document).on('keydown keyup', function(e) {
                 }, 20);
             }, (250));
         }
+
+        // d - shoryuken
+        if (e.keyCode == 68 
+            && !$ken.hasClass('tatsumaki')
+            && !$ken.hasClass('shoryuken') 
+            && !$ken.hasClass('hadoken') 
+            && !$ken.hasClass('punch') 
+            && !$ken.hasClass('kick') 
+            && !$ken.hasClass('reversekick')
+            && !$ken.hasClass('jump')
+        ) { 
+            soundManager.play('shoryu', {
+                multiShotEvents: true, 
+                onfinish:function() {
+                    soundManager.play('ken');
+                }
+            });
+            $ken.addClass('shoryuken');
+            setTimeout(function() { $ken.addClass('down'); }, 500); 
+            setTimeout(function() { $ken.removeClass('shoryuken down'); }, 1000);
+        }
+
+        // q - tatsumaki senpuu kyaku
+        if (e.keyCode == 81 
+            && !$ken.hasClass('tatsumaki') 
+            && !$ken.hasClass('shoryuken') 
+            && !$ken.hasClass('hadoken') 
+            && !$ken.hasClass('punch') 
+            && !$ken.hasClass('kick') 
+            && !$ken.hasClass('reversekick')
+            && !$ken.hasClass('jump')
+        ) { 
+            soundManager.play('tatsumaki');
+            $ken.addClass('tatsumaki');
+            setTimeout(function() { $ken.addClass('down'); }, 1500); 
+            setTimeout(function() { $ken.removeClass('tatsumaki down'); }, 2000);
+        }
+
         // a - punch
         if (e.keyCode == 65 
             && !$ken.hasClass('punch') 
-            && !$ken.hasClass('hadoken')
+            && !$ken.hasClass('hadoken') 
+            && !$ken.hasClass('shoryuken') 
+            && !$ken.hasClass('tatsumaki') 
         ) { 
             $ken.addClass('punch'); 
             soundManager.play('huh1');
             setTimeout(function() { $ken.removeClass('punch'); }, 150); 
         }
+
         // e - kick
-        if (e.keyCode == 69 
+        if (e.keyCode == 90 
             && !$ken.hasClass('kick') 
-            && !$ken.hasClass('hadoken')
+            && !$ken.hasClass('hadoken') 
+            && !$ken.hasClass('shoryuken') 
+            && !$ken.hasClass('tatsumaki')
         ) { 
             $ken.addClass('kick');
             soundManager.play('huh3');
             setTimeout(function() { $ken.removeClass('kick'); }, 500); 
         }
+
         // r - reverse kick
-        if (e.keyCode == 82 
+        if (e.keyCode == 69 
             && !$ken.hasClass('reversekick') 
             && !$ken.hasClass('kick') 
-            && !$ken.hasClass('hadoken')
+            && !$ken.hasClass('hadoken') 
+            && !$ken.hasClass('shoryuken') 
+            && !$ken.hasClass('tatsumaki')
         ) { 
             $ken.addClass('reversekick');
             soundManager.play('huh2');
             setTimeout(function() { $ken.removeClass('reversekick'); }, 500); 
         }
+
         // up - jump
         if (e.keyCode == 38 
             && !$ken.hasClass('jump') 
             && !$ken.hasClass('reversekick') 
             && !$ken.hasClass('kick') 
-            && !$ken.hasClass('hadoken')
+            && !$ken.hasClass('hadoken') 
+            && !$ken.hasClass('shoryuken') 
+            && !$ken.hasClass('tatsumaki')
         ) { 
             $ken.addClass('jump');
             setTimeout(function() { $ken.addClass('down'); }, 500); 
             setTimeout(function() { $ken.removeClass('jump down'); }, 1000); 
         }
+
         // down - kneel
         if (e.keyCode == 40 
             && !$ken.hasClass('kneel') 
             && !$ken.hasClass('jump') 
             && !$ken.hasClass('reversekick') 
             && !$ken.hasClass('kick') 
-            && !$ken.hasClass('hadoken')
+            && !$ken.hasClass('hadoken') 
+            && !$ken.hasClass('shoryuken') 
+            && !$ken.hasClass('tatsumaki')
         ) { 
             $ken.addClass('kneel');
         }

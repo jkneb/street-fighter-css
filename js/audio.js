@@ -27,6 +27,12 @@ soundManager.onready(function() {
         url:'audio/hado-shoryu_ken/ken.wav'
     });
 
+    // tatsumaki senpuu kyaku
+    // ------------------------------- /
+    soundManager.createSound({
+        id:'tatsumaki',
+        url:'audio/tatsumaki-senpuu-kyaku.wav'
+    });
 
     // you win/loose
     // ------------------------------- /

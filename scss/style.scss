@@ -32,9 +32,9 @@ $spriteHeight:80px;
     
     // shadow
     &:before { 
-        content:''; z-index:-1; position:absolute; bottom:-2px; left:17px; right:17px; 
-        height:6px; background-color:rgba(0,0,0,.4); 
-        @include border-radius(50%); @include box-shadow(0 0 5px);
+        //content:''; z-index:-1; position:absolute; bottom:-2px; left:17px; right:17px; 
+        //height:6px; background-color:rgba(0,0,0,.4); 
+        //@include border-radius(50%); @include box-shadow(0 0 5px);
     }
 }
 
@@ -68,5 +68,21 @@ $spriteHeight:80px;
 @include anim($animName:jump, $steps:7, $animNbr:9, $animParams:1s infinite) {
     @include transition(bottom .5s cubic-bezier(0.990, 0.005, 0.000, 0.420));
     bottom:150px;
+    &.down { bottom:45px; }
+}
+/* shoryuken */
+@include anim($animName:shoryuken, $steps:7, $animNbr:1, $animParams:1s infinite) {
+    height:110px;
+    background-image:url(../images/ken-shoryuken.png);
+    @include transition(bottom .5s cubic-bezier(0.990, 0.005, 0.000, 0.420));
+    bottom:200px;
+    &.down { bottom:45px; }
+}
+/* tatsumaki senpuu kyaku */
+@include anim($animName:tatsumaki, $steps:13, $animNbr:1, $animParams:2s infinite) {
+    height:110px;
+    background-image:url(../images/ken-tatsumaki-senpuu-kyaku.png);
+    @include transition(bottom .2s cubic-bezier(0.990, 0.005, 0.000, 0.420));
+    bottom:60px;
     &.down { bottom:45px; }
 }

@@ -74,22 +74,6 @@ body {
   width: 70px;
   height: 80px;
   background-image: url(../images/ken.png); }
-  .ken:before, .fireball:before {
-    content: '';
-    z-index: -1;
-    position: absolute;
-    bottom: -2px;
-    left: 17px;
-    right: 17px;
-    height: 6px;
-    background-color: rgba(0, 0, 0, 0.4);
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    border-radius: 50%;
-    -webkit-box-shadow: 0 0 5px;
-    -moz-box-shadow: 0 0 5px;
-    box-shadow: 0 0 5px; }
 
 /* ken's fireball */
 .fireball {
@@ -461,3 +445,91 @@ body {
 
   to {
     background-position: -490px -640px; } }
+
+/* shoryuken */
+.shoryuken {
+  height: 110px;
+  background-image: url(../images/ken-shoryuken.png);
+  -webkit-transition: bottom 0.5s cubic-bezier(0.99, 0.005, 0, 0.42);
+  -moz-transition: bottom 0.5s cubic-bezier(0.99, 0.005, 0, 0.42);
+  -ms-transition: bottom 0.5s cubic-bezier(0.99, 0.005, 0, 0.42);
+  transition: bottom 0.5s cubic-bezier(0.99, 0.005, 0, 0.42);
+  bottom: 200px;
+  -webkit-animation: shoryuken steps(7) 1s infinite;
+  -moz-animation: shoryuken steps(7) 1s infinite;
+  -ms-animation: shoryuken steps(7) 1s infinite;
+  animation: shoryuken steps(7) 1s infinite; }
+  .shoryuken.down {
+    bottom: 45px; }
+
+@-webkit-keyframes shoryuken {
+  from {
+    background-position: 0px 0px; }
+
+  to {
+    background-position: -490px 0px; } }
+
+@-moz-keyframes shoryuken {
+  from {
+    background-position: 0px 0px; }
+
+  to {
+    background-position: -490px 0px; } }
+
+@-ms-keyframes shoryuken {
+  from {
+    background-position: 0px 0px; }
+
+  to {
+    background-position: -490px 0px; } }
+
+@keyframes shoryuken {
+  from {
+    background-position: 0px 0px; }
+
+  to {
+    background-position: -490px 0px; } }
+
+/* tatsumaki senpuu kyaku */
+.tatsumaki {
+  height: 110px;
+  background-image: url(../images/ken-tatsumaki-senpuu-kyaku.png);
+  -webkit-transition: bottom 0.2s cubic-bezier(0.99, 0.005, 0, 0.42);
+  -moz-transition: bottom 0.2s cubic-bezier(0.99, 0.005, 0, 0.42);
+  -ms-transition: bottom 0.2s cubic-bezier(0.99, 0.005, 0, 0.42);
+  transition: bottom 0.2s cubic-bezier(0.99, 0.005, 0, 0.42);
+  bottom: 60px;
+  -webkit-animation: tatsumaki steps(13) 2s infinite;
+  -moz-animation: tatsumaki steps(13) 2s infinite;
+  -ms-animation: tatsumaki steps(13) 2s infinite;
+  animation: tatsumaki steps(13) 2s infinite; }
+  .tatsumaki.down {
+    bottom: 45px; }
+
+@-webkit-keyframes tatsumaki {
+  from {
+    background-position: 0px 0px; }
+
+  to {
+    background-position: -910px 0px; } }
+
+@-moz-keyframes tatsumaki {
+  from {
+    background-position: 0px 0px; }
+
+  to {
+    background-position: -910px 0px; } }
+
+@-ms-keyframes tatsumaki {
+  from {
+    background-position: 0px 0px; }
+
+  to {
+    background-position: -910px 0px; } }
+
+@keyframes tatsumaki {
+  from {
+    background-position: 0px 0px; }
+
+  to {
+    background-position: -910px 0px; } }
