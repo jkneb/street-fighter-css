@@ -9,6 +9,14 @@ $(document).on('keydown keyup', function(e) {
             && !$ken.hasClass('reversekick')
         ) { 
             $ken.addClass('hadoken'); 
+            
+            soundManager.play('shoryu', {
+                multiShotEvents: true, 
+                onfinish:function() {
+                    soundManager.play('ken');
+                }
+            });
+            
             setTimeout(function() { $ken.removeClass('hadoken'); }, 500); 
             setTimeout(function() { 
                 var $fireball = $('<div/>', { class:'fireball' });
@@ -31,6 +39,7 @@ $(document).on('keydown keyup', function(e) {
             && !$ken.hasClass('hadoken')
         ) { 
             $ken.addClass('punch'); 
+            //context.playSound('huh1');
             setTimeout(function() { $ken.removeClass('punch'); }, 150); 
         }
         // e - kick
@@ -39,6 +48,7 @@ $(document).on('keydown keyup', function(e) {
             && !$ken.hasClass('hadoken')
         ) { 
             $ken.addClass('kick');
+            //context.playSound('huh3');
             setTimeout(function() { $ken.removeClass('kick'); }, 500); 
         }
         // r - reverse kick
