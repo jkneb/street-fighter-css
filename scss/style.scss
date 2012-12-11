@@ -11,6 +11,14 @@ body { background-color:black; margin:0; }
     width:1024px; height:400px; margin:0 auto; overflow:hidden; position:relative; z-index:0;
     background:url(../images/bg.jpg) no-repeat; 
 }
+.pause {
+    position:absolute; right:5px; bottom:5px; width:20px; height:20px; 
+    background:rgba(255,255,255,.4) url(../images/play-pause-white.png) no-repeat left top;
+    @include border-radius(100%);
+    cursor:pointer;
+    
+    &.play { background-position:left bottom; }
+}
 .commands { 
     margin-top:20px; padding:20px; width:1024px; margin:0 auto; background-color:#fff; 
     font-family:"Bangers", cursive, Arial; font-size:20px; 

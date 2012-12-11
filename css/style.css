@@ -45,6 +45,21 @@ body {
   z-index: 0;
   background: url(../images/bg.jpg) no-repeat; }
 
+.pause {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.4) url(../images/play-pause-white.png) no-repeat left top;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  border-radius: 100%;
+  cursor: pointer; }
+  .pause.play {
+    background-position: left bottom; }
+
 .commands {
   margin-top: 20px;
   padding: 20px;

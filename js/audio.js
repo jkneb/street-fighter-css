@@ -9,8 +9,17 @@ soundManager.onready(function() {
         id:'music',
         url:'audio/music.mp3'
     });
-    //backgorundMusic.play({ volume:50 });
-    
+    backgorundMusic.play({ volume:70 });
+    $('.pause').on('click', function(){
+        var $this = $(this);
+        if ($this.hasClass('play')) {
+            $this.removeClass('play');
+            backgorundMusic.resume();
+        } else {
+            $this.addClass('play');
+            backgorundMusic.pause();
+        }
+    });
 
     // hado/shoryu ken
     // ------------------------------- /
