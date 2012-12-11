@@ -1,4 +1,30 @@
 var $ken = $('.ken');
+
+var $kenPos, $obstaclePos, $fireballPos, 
+    $obstacle = $('.obstacle'),
+    $fball = $('.fireball') || null;
+
+setInterval(function(){
+    $kenPos = $ken.offset();
+    //console.log('$ken     :',$kenPos);
+    $obstaclePos = $obstacle.offset();
+    //console.log('$obstacle:',$obstaclePos);
+    //console.log('interval:',$obstaclePos.left - $kenPos.left);
+    if ($('.fireball').length) {
+        $fireballPos = $('.fireball').offset() || '';
+        console.log('fireballInterval:',$obstaclePos.left - $fireballPos.left);
+    }
+    console.log();
+}, 250);
+
+var isColision = function(){ 
+    return ($obstaclePos.left - $kenPos.left <= 75 && $obstaclePos.left - $kenPos.left >= -75) ? true : false;
+};
+var isFireballColision = function(){ 
+    return ($obstaclePos.left - $fireballPos.left <= 75 && $obstaclePos.left - $fireballPos.left >= -75) ? true : false;
+};
+
+
 $(document).on('keydown keyup', function(e) {
     if (e.type == 'keydown') { 
         
@@ -24,7 +50,7 @@ $(document).on('keydown keyup', function(e) {
             setTimeout(function() { 
                 var $fireball = $('<div/>', { class:'fireball' });
                 $fireball.appendTo($ken);
-                var delayForExplode = $fireball.css('transition-duration').split('s')[0]*1000; 
+                //var delayForExplode = $fireball.css('transition-duration').split('s')[0]*1000; 
                 setTimeout(function() { 
                     $fireball.addClass('moving');
                     
@@ -33,11 +59,11 @@ $(document).on('keydown keyup', function(e) {
                         setTimeout(function() { 
                             $fireball.remove();
                         }, 500); 
+                    } else {
+                        
                     }
-                    setTimeout(function() {
-                        $fireball.remove();
-                    }, delayForExplode);
                 }, 20);
+                setTimeout(function() { $fireball.remove(); }, 3020);
             }, (250));
         }
 
@@ -191,27 +217,3 @@ $(document).on('keydown keyup', function(e) {
 
     console.log(e.keyCode);
 });
-
-
-var $kenPos, $obstaclePos, $fireballPos, 
-    $obstacle = $('.obstacle'),
-    $fball = $('.fireball') || null;
-
-setInterval(function(){
-    $kenPos = $ken.offset();
-    console.log('$ken     :',$kenPos);
-    $obstaclePos = $obstacle.offset();
-    console.log('$obstacle:',$obstaclePos);
-    //console.log('interval:',$obstaclePos.left - $kenPos.left);
-    if ($('.fireball').length) {
-        $fireballPos = $('.fireball').offset();
-        console.log('fireballInterval:',$obstaclePos.left - $fireballPos.left);
-    }
-    console.log();
-}, 250);
-var isColision = function(){ 
-    return ($obstaclePos.left - $kenPos.left <= 75 && $obstaclePos.left - $kenPos.left >= -75) ? true : false;
-};
-var isFireballColision = function(){ 
-    return ($obstaclePos.left - $fireballPos.left <= 75 && $obstaclePos.left - $fireballPos.left >= -75) ? true : false;
-};
