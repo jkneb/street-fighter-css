@@ -15,10 +15,10 @@ soundManager.onready(function() {
         var $this = $(this);
         if ($this.hasClass('play')) {
             $this.removeClass('play');
-            backgorundMusic.resume();
+            backgroundMusic.resume();
         } else {
             $this.addClass('play');
-            backgorundMusic.pause();
+            backgroundMusic.pause();
         }
     });
 
