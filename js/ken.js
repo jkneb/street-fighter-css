@@ -26,13 +26,17 @@ $(document).on('keydown keyup', function(e) {
                 $fireball.appendTo($ken);
                 var delayForExplode = $fireball.css('transition-duration').split('s')[0]*1000; 
                 setTimeout(function() { 
-                    $fireball.addClass('moving'); 
-                    setTimeout(function() { 
+                    $fireball.addClass('moving');
+                    
+                    if (isFireballColision()) {
                         $fireball.addClass('explode'); 
                         setTimeout(function() { 
                             $fireball.remove();
                         }, 500); 
-                    }, delayForExplode); 
+                    }
+                    setTimeout(function() {
+                        $fireball.remove();
+                    }, delayForExplode);
                 }, 20);
             }, (250));
         }
@@ -53,6 +57,15 @@ $(document).on('keydown keyup', function(e) {
                     soundManager.play('ken');
                 }
             });
+            if (isColision()) { 
+                console.log('hit shoryuken')
+                soundManager.play('hit2',{
+                    multiShotEvents: true, 
+                    onfinish:function() {
+                        soundManager.play('hit2');
+                    }
+                });
+            }
             $ken.addClass('shoryuken');
             setTimeout(function() { $ken.addClass('down'); }, 500); 
             setTimeout(function() { $ken.removeClass('shoryuken down'); }, 1000);
@@ -70,6 +83,15 @@ $(document).on('keydown keyup', function(e) {
         ) { 
             soundManager.play('tatsumaki');
             $ken.addClass('tatsumaki');
+            if (isColision()) { 
+                console.log('hit tatsumaki')
+                soundManager.play('hit2',{
+                    multiShotEvents: true, 
+                    onfinish:function() {
+                        soundManager.play('hit2').play('hit2');
+                    }
+                });
+            }
             setTimeout(function() { $ken.addClass('down'); }, 1500); 
             setTimeout(function() { $ken.removeClass('tatsumaki down'); }, 2000);
         }
@@ -83,6 +105,10 @@ $(document).on('keydown keyup', function(e) {
         ) { 
             $ken.addClass('punch'); 
             soundManager.play('huh1');
+            if (isColision()) { 
+                console.log('hit1')
+                soundManager.play('hit1');
+            }
             setTimeout(function() { $ken.removeClass('punch'); }, 150); 
         }
 
@@ -95,6 +121,10 @@ $(document).on('keydown keyup', function(e) {
         ) { 
             $ken.addClass('kick');
             soundManager.play('huh3');
+            if (isColision()) { 
+                console.log('hit1')
+                soundManager.play('hit1');
+            }
             setTimeout(function() { $ken.removeClass('kick'); }, 500); 
         }
 
@@ -108,6 +138,10 @@ $(document).on('keydown keyup', function(e) {
         ) { 
             $ken.addClass('reversekick');
             soundManager.play('huh2');
+            if (isColision()) { 
+                console.log('hit1')
+                soundManager.play('hit1');
+            }
             setTimeout(function() { $ken.removeClass('reversekick'); }, 500); 
         }
 
@@ -157,3 +191,27 @@ $(document).on('keydown keyup', function(e) {
 
     console.log(e.keyCode);
 });
+
+
+var $kenPos, $obstaclePos, $fireballPos, 
+    $obstacle = $('.obstacle'),
+    $fball = $('.fireball') || null;
+
+setInterval(function(){
+    $kenPos = $ken.offset();
+    console.log('$ken     :',$kenPos);
+    $obstaclePos = $obstacle.offset();
+    console.log('$obstacle:',$obstaclePos);
+    //console.log('interval:',$obstaclePos.left - $kenPos.left);
+    if ($('.fireball').length) {
+        $fireballPos = $('.fireball').offset();
+        console.log('fireballInterval:',$obstaclePos.left - $fireballPos.left);
+    }
+    console.log();
+}, 250);
+var isColision = function(){ 
+    return ($obstaclePos.left - $kenPos.left <= 75 && $obstaclePos.left - $kenPos.left >= -75) ? true : false;
+};
+var isFireballColision = function(){ 
+    return ($obstaclePos.left - $fireballPos.left <= 75 && $obstaclePos.left - $fireballPos.left >= -75) ? true : false;
+};

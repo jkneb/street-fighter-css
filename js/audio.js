@@ -1,15 +1,16 @@
 
 soundManager.setup({
-    url:'audio/soundmanager2.swf'
+    url:'audio/soundmanager2.swf',
+    debugMode:false
 });
 
 soundManager.onready(function() {
     
-    var backgorundMusic = soundManager.createSound({
+    var backgroundMusic = soundManager.createSound({
         id:'music',
         url:'audio/music.mp3'
     });
-    backgorundMusic.play({ volume:70 });
+    backgroundMusic.play({ volume:70 });
     $('.pause').on('click', function(){
         var $this = $(this);
         if ($this.hasClass('play')) {
@@ -74,8 +75,36 @@ soundManager.onready(function() {
         url:'audio/huhs/huh3.wav'
     });
 
-    // punchs
+    // hits
     // ------------------------------- /
+    soundManager.createSound({
+        id:'hit1',
+        url:'audio/hits/1.wav'
+    });
+    soundManager.createSound({
+        id:'hit2',
+        url:'audio/hits/2.wav'
+    });
+    soundManager.createSound({
+        id:'hit3',
+        url:'audio/hits/3.wav'
+    });
+    soundManager.createSound({
+        id:'hit4',
+        url:'audio/hits/4.wav'
+    });
+    soundManager.createSound({
+        id:'hit5',
+        url:'audio/hits/5.wav'
+    });
+    soundManager.createSound({
+        id:'hit6',
+        url:'audio/hits/6.wav'
+    });
+    soundManager.createSound({
+        id:'hit7',
+        url:'audio/hits/7.wav'
+    });
     soundManager.createSound({
         id:'punch',
         url:'audio/hits/kung_fu_punch-Mike_Koenig-2097967259.mp3'

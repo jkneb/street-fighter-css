@@ -3,7 +3,7 @@
 @import url(http://fonts.googleapis.com/css?family=Bangers);
 
 // debug mode
-//.stage * { outline:1px solid pink; }
+.stage * { outline:1px solid pink; }
 
 body { background-color:black; margin:0; }
 
@@ -25,6 +25,9 @@ body { background-color:black; margin:0; }
     @include border-radius(0 0 10px 10px); 
     @include box-shadow(inset 0 5px 15px rgba(0,0,0,.4));
 }
+
+.obstacle { width:70px; height:100px; position:absolute; bottom:35px; right:400px; }
+
 // element who's going to receive this class will be reversed / mirrored :)
 .flip { @include transform(scaleX(-1)); }
 
@@ -52,9 +55,9 @@ $spriteHeight:80px;
     position:absolute; left:100%; bottom:0px;
     margin-left:0; // default margin-left
     background-position:140px 320px; // default background position
-    @include transition(margin 1s ease); 
+    @include transition(margin 6s linear); 
     &:before { left:25px; right:25px; }
-    &.moving { margin-left:500px; } // triggering the movement with this class
+    &.moving { margin-left:2000px; } // triggering the movement with this class
 }
 /* ken's fireball impact explosion */
 @include anim($animName:explode, $steps:4, $animNbr:6, $animParams:.5s 1);
