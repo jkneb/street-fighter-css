@@ -97,3 +97,27 @@ $spriteHeight:80px;
     bottom:60px;
     &.down { bottom:45px; }
 }
+
+
+$spriteWidth:70px;
+$spriteHeight:90px;
+
+.guile { 
+    position:absolute; bottom:35px; margin-left:410px;
+    width:$spriteWidth; height:$spriteHeight; 
+    background-image:url(../images/guile.png); 
+}
+/* stance */
+@include anim($animName:stance2, $steps:3, $animNbr:1, $animParams:.5s infinite);
+/* hit1 */
+@include anim($animName:hit1, $steps:1, $animNbr:1, $animParams:.5s infinite) {
+    background-image:url(../images/guile-hit.png);
+};
+/* hit2 */
+@include anim($animName:hit2, $steps:3, $animNbr:2, $animParams:.5s infinite) {
+    background-image:url(../images/guile-hit.png);
+};
+/* hit3 */
+@include anim($animName:hit3, $steps:3, $animNbr:3, $animParams:.5s infinite) {
+    background-image:url(../images/guile-hit.png);
+};

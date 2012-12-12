@@ -1,18 +1,18 @@
 var $ken = $('.ken');
 
-var $kenPos, $obstaclePos, $fireballPos, 
-    $obstacle = $('.obstacle');
+var $kenPos, $guilePos, $fireballPos, 
+    $guile = $('.guile');
 
 setInterval(function(){
     $kenPos = $ken.offset();
     //console.log('$ken     :',$kenPos);
-    $obstaclePos = $obstacle.offset();
-    //console.log('$obstacle:',$obstaclePos);
-    //console.log('interval:',$obstaclePos.left - $kenPos.left);
+    $guilePos = $guile.offset();
+    //console.log('$guile:',$guilePos);
+    //console.log('interval:',$guilePos.left - $kenPos.left);
 }, 250);
 
 var isColision = function(){ 
-    return ($obstaclePos.left - $kenPos.left <= 75 && $obstaclePos.left - $kenPos.left >= -75) ? true : false;
+    return ($guilePos.left - $kenPos.left <= 75 && $guilePos.left - $kenPos.left >= -75) ? true : false;
 };
 
 
@@ -43,19 +43,21 @@ $(document).on('keydown keyup', function(e) {
                 $fireball.appendTo($ken);
                 
                 var isFireballColision = function(){ 
-                    return ($obstaclePos.left - $fireballPos.left <= 75 && $obstaclePos.left - $fireballPos.left >= -75) ? true : false;
+                    return ($guilePos.left - $fireballPos.left <= 75 && $guilePos.left - $fireballPos.left >= -75) ? true : false;
                 };
 
                 var explodeIfColision = setInterval(function(){
                     
                     $fireballPos = $fireball.offset();
-                    console.log('fireballInterval:',$obstaclePos.left - $fireballPos.left);
+                    console.log('fireballInterval:',$guilePos.left - $fireballPos.left);
 
                     if (isFireballColision()) {
                         $fireball.addClass('explode').removeClass('moving').css('marginLeft','+=22px'); 
                         clearInterval(explodeIfColision);
                         soundManager.play('hit5');
                         setTimeout(function() { $fireball.remove(); }, 500); 
+                        $guile.addClass('hit2');
+                        setTimeout(function() { $guile.removeClass('hit2'); }, 500);
                     }
 
                 }, 250);
@@ -137,8 +139,9 @@ $(document).on('keydown keyup', function(e) {
             $ken.addClass('punch'); 
             soundManager.play('huh1');
             if (isColision()) { 
-                console.log('hit1')
                 soundManager.play('hit1');
+                $guile.addClass('hit1');
+                setTimeout(function() { $guile.removeClass('hit1'); }, 500);
             }
             setTimeout(function() { $ken.removeClass('punch'); }, 150); 
         }
@@ -153,8 +156,9 @@ $(document).on('keydown keyup', function(e) {
             $ken.addClass('kick');
             soundManager.play('huh3');
             if (isColision()) { 
-                console.log('hit1')
                 soundManager.play('hit1');
+                $guile.addClass('hit2');
+                setTimeout(function() { $guile.removeClass('hit2'); }, 500);
             }
             setTimeout(function() { $ken.removeClass('kick'); }, 500); 
         }
@@ -170,8 +174,9 @@ $(document).on('keydown keyup', function(e) {
             $ken.addClass('reversekick');
             soundManager.play('huh2');
             if (isColision()) { 
-                console.log('hit1')
                 soundManager.play('hit1');
+                $guile.addClass('hit2');
+                setTimeout(function() { $guile.removeClass('hit2'); }, 500);
             }
             setTimeout(function() { $ken.removeClass('reversekick'); }, 500); 
         }

@@ -558,3 +558,154 @@ body {
 
   to {
     background-position: -910px 0px; } }
+
+.guile {
+  position: absolute;
+  bottom: 35px;
+  margin-left: 410px;
+  width: 70px;
+  height: 90px;
+  background-image: url(../images/guile.png); }
+
+/* stance */
+.stance2 {
+  -webkit-animation: stance2 steps(3) 0.5s infinite;
+  -moz-animation: stance2 steps(3) 0.5s infinite;
+  -ms-animation: stance2 steps(3) 0.5s infinite;
+  animation: stance2 steps(3) 0.5s infinite; }
+
+@-webkit-keyframes stance2 {
+  from {
+    background-position: 0px 0px; }
+
+  to {
+    background-position: -210px 0px; } }
+
+@-moz-keyframes stance2 {
+  from {
+    background-position: 0px 0px; }
+
+  to {
+    background-position: -210px 0px; } }
+
+@-ms-keyframes stance2 {
+  from {
+    background-position: 0px 0px; }
+
+  to {
+    background-position: -210px 0px; } }
+
+@keyframes stance2 {
+  from {
+    background-position: 0px 0px; }
+
+  to {
+    background-position: -210px 0px; } }
+
+/* hit1 */
+.hit1 {
+  background-image: url(../images/guile-hit.png);
+  -webkit-animation: hit1 steps(1) 0.5s infinite;
+  -moz-animation: hit1 steps(1) 0.5s infinite;
+  -ms-animation: hit1 steps(1) 0.5s infinite;
+  animation: hit1 steps(1) 0.5s infinite; }
+
+@-webkit-keyframes hit1 {
+  from {
+    background-position: 0px 0px; }
+
+  to {
+    background-position: -70px 0px; } }
+
+@-moz-keyframes hit1 {
+  from {
+    background-position: 0px 0px; }
+
+  to {
+    background-position: -70px 0px; } }
+
+@-ms-keyframes hit1 {
+  from {
+    background-position: 0px 0px; }
+
+  to {
+    background-position: -70px 0px; } }
+
+@keyframes hit1 {
+  from {
+    background-position: 0px 0px; }
+
+  to {
+    background-position: -70px 0px; } }
+
+/* hit2 */
+.hit2 {
+  background-image: url(../images/guile-hit.png);
+  -webkit-animation: hit2 steps(3) 0.5s infinite;
+  -moz-animation: hit2 steps(3) 0.5s infinite;
+  -ms-animation: hit2 steps(3) 0.5s infinite;
+  animation: hit2 steps(3) 0.5s infinite; }
+
+@-webkit-keyframes hit2 {
+  from {
+    background-position: 0px -90px; }
+
+  to {
+    background-position: -210px -90px; } }
+
+@-moz-keyframes hit2 {
+  from {
+    background-position: 0px -90px; }
+
+  to {
+    background-position: -210px -90px; } }
+
+@-ms-keyframes hit2 {
+  from {
+    background-position: 0px -90px; }
+
+  to {
+    background-position: -210px -90px; } }
+
+@keyframes hit2 {
+  from {
+    background-position: 0px -90px; }
+
+  to {
+    background-position: -210px -90px; } }
+
+/* hit3 */
+.hit3 {
+  background-image: url(../images/guile-hit.png);
+  -webkit-animation: hit3 steps(3) 0.5s infinite;
+  -moz-animation: hit3 steps(3) 0.5s infinite;
+  -ms-animation: hit3 steps(3) 0.5s infinite;
+  animation: hit3 steps(3) 0.5s infinite; }
+
+@-webkit-keyframes hit3 {
+  from {
+    background-position: 0px -180px; }
+
+  to {
+    background-position: -210px -180px; } }
+
+@-moz-keyframes hit3 {
+  from {
+    background-position: 0px -180px; }
+
+  to {
+    background-position: -210px -180px; } }
+
+@-ms-keyframes hit3 {
+  from {
+    background-position: 0px -180px; }
+
+  to {
+    background-position: -210px -180px; } }
+
+@keyframes hit3 {
+  from {
+    background-position: 0px -180px; }
+
+  to {
+    background-position: -210px -180px; } }
