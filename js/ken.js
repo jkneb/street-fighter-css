@@ -1,8 +1,7 @@
 var $ken = $('.ken');
 
 var $kenPos, $obstaclePos, $fireballPos, 
-    $obstacle = $('.obstacle'),
-    $fball = $('.fireball') || null;
+    $obstacle = $('.obstacle');
 
 setInterval(function(){
     $kenPos = $ken.offset();
@@ -10,18 +9,10 @@ setInterval(function(){
     $obstaclePos = $obstacle.offset();
     //console.log('$obstacle:',$obstaclePos);
     //console.log('interval:',$obstaclePos.left - $kenPos.left);
-    if ($('.fireball').length) {
-        $fireballPos = $('.fireball').offset() || '';
-        console.log('fireballInterval:',$obstaclePos.left - $fireballPos.left);
-    }
-    console.log();
 }, 250);
 
 var isColision = function(){ 
     return ($obstaclePos.left - $kenPos.left <= 75 && $obstaclePos.left - $kenPos.left >= -75) ? true : false;
-};
-var isFireballColision = function(){ 
-    return ($obstaclePos.left - $fireballPos.left <= 75 && $obstaclePos.left - $fireballPos.left >= -75) ? true : false;
 };
 
 
@@ -50,20 +41,33 @@ $(document).on('keydown keyup', function(e) {
             setTimeout(function() { 
                 var $fireball = $('<div/>', { class:'fireball' });
                 $fireball.appendTo($ken);
-                //var delayForExplode = $fireball.css('transition-duration').split('s')[0]*1000; 
-                setTimeout(function() { 
-                    $fireball.addClass('moving');
+                
+                var isFireballColision = function(){ 
+                    return ($obstaclePos.left - $fireballPos.left <= 75 && $obstaclePos.left - $fireballPos.left >= -75) ? true : false;
+                };
+
+                var explodeIfColision = setInterval(function(){
                     
+                    $fireballPos = $fireball.offset();
+                    console.log('fireballInterval:',$obstaclePos.left - $fireballPos.left);
+
                     if (isFireballColision()) {
-                        $fireball.addClass('explode'); 
-                        setTimeout(function() { 
-                            $fireball.remove();
-                        }, 500); 
-                    } else {
-                        
+                        $fireball.addClass('explode').removeClass('moving').css('marginLeft','+=22px'); 
+                        soundManager.play('hit5');
+                        setTimeout(function() { $fireball.remove(); }, 500); 
                     }
-                }, 20);
-                setTimeout(function() { $fireball.remove(); }, 3020);
+
+                }, 250);
+
+                //var delayForExplode = $fireball.css('transition-duration').split('s')[0]*1000; 
+                
+                setTimeout(function() { $fireball.addClass('moving'); }, 20);
+                
+                setTimeout(function() { 
+                    $fireball.remove(); 
+                    clearInterval(explodeIfColision);
+                }, 3020);
+
             }, (250));
         }
 
