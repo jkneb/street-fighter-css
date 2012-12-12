@@ -53,6 +53,7 @@ $(document).on('keydown keyup', function(e) {
 
                     if (isFireballColision()) {
                         $fireball.addClass('explode').removeClass('moving').css('marginLeft','+=22px'); 
+                        clearInterval(explodeIfColision);
                         soundManager.play('hit5');
                         setTimeout(function() { $fireball.remove(); }, 500); 
                     }
