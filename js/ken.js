@@ -210,9 +210,9 @@ $(document).on('keydown keyup', function(e) {
     
     
         // ← flip 
-        if (e.keyCode == 37) $ken.addClass('flip');
+        //if (e.keyCode == 37) $ken.addClass('flip');
         // → unflip 
-        if (e.keyCode == 39) $ken.removeClass('flip');
+        //if (e.keyCode == 39) $ken.removeClass('flip');
         // ←← →→ walking
         if (e.type == 'keydown' && (e.keyCode == 37 || e.keyCode == 39)) { 
             if ($ken.hasClass('flip')) 
@@ -220,10 +220,18 @@ $(document).on('keydown keyup', function(e) {
             else 
                 $ken.addClass('walk').css({ marginLeft:'+=10px' });
         }
+        if (e.keyCode == 38 && e.keyCode == 39) {
+            console.log('up and down');
+        }
+        if (e.which == 98 && e.ctrlKey) {
+            // ctrl+b pressed
+            
+        }
     }
     else { // keyup
         $ken.removeClass('walk kneel');
     }
 
     console.log(e.keyCode);
+    
 });

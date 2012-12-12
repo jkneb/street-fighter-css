@@ -1,14 +1,14 @@
 
 soundManager.setup({
     url:'audio/soundmanager2.swf',
-    debugMode:false
+    debugMode:true
 });
 
 soundManager.onready(function() {
     
     var backgroundMusic = soundManager.createSound({
         id:'music',
-        url:'audio/music.mp3'
+        url:'audio/musics/Guile.mp3'
     });
     backgroundMusic.play({ volume:70 });
     $('.pause').on('click', function(){
