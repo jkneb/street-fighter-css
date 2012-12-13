@@ -214,18 +214,17 @@ $(document).on('keydown keyup', function(e) {
         // → unflip 
         //if (e.keyCode == 39) $ken.removeClass('flip');
         // ←← →→ walking
-        if (e.type == 'keydown' && (e.keyCode == 37 || e.keyCode == 39)) { 
+        if (e.keyCode == 37) { 
             if ($ken.hasClass('flip')) 
                 $ken.addClass('walk').css({ marginLeft:'-=10px' });
             else 
+                $ken.addClass('walk').css({ marginLeft:'-=10px' });
+        }
+        if (e.keyCode == 39) {
+            if ($ken.hasClass('flip')) 
                 $ken.addClass('walk').css({ marginLeft:'+=10px' });
-        }
-        if (e.keyCode == 38 && e.keyCode == 39) {
-            console.log('up and down');
-        }
-        if (e.which == 98 && e.ctrlKey) {
-            // ctrl+b pressed
-            
+            else 
+                $ken.addClass('walk').css({ marginLeft:'+=10px' });
         }
     }
     else { // keyup
