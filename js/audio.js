@@ -1,7 +1,7 @@
 
 soundManager.setup({
     url:'audio/soundmanager2.swf',
-    debugMode:true
+    debugMode:false
 });
 
 soundManager.onready(function() {

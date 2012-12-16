@@ -121,3 +121,4 @@ $spriteHeight:90px;
 @include anim($animName:hit3, $steps:3, $animNbr:3, $animParams:.5s infinite) {
     background-image:url(../images/guile-hit.png);
 };
+
