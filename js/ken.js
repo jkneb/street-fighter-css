@@ -216,9 +216,11 @@ $(document).on('keydown keyup', function(e) {
         // ←← →→ walking
         if (e.keyCode == 37) { 
             if ($ken.hasClass('flip')) 
-                $ken.addClass('walk').css({ marginLeft:'-=10px' });
+                //$ken.addClass('walk').css({ marginLeft:'-=10px' });
+                $ken.addClass('walk').animate({ marginLeft:'-=10px' });
             else 
-                $ken.addClass('walk').css({ marginLeft:'-=10px' });
+                //$ken.addClass('walk').css({ marginLeft:'-=10px' });
+                $ken.addClass('walk').animate({ marginLeft:'-=10px' });
         }
         if (e.keyCode == 39) {
             if ($ken.hasClass('flip')) 

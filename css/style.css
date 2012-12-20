@@ -43,7 +43,7 @@ body {
   overflow: hidden;
   position: relative;
   z-index: 0;
-  background: url(../images/bg.jpg) no-repeat; }
+  background: url(../images/bg2.jpg) no-repeat bottom center; }
 
 .pause {
   position: absolute;
@@ -93,9 +93,9 @@ body {
   position: absolute;
   bottom: 35px;
   margin-left: 210px;
-  width: 70px;
-  height: 80px;
-  background-image: url(../images/ken.png); }
+  width: 175px;
+  height: 200px;
+  background-image: url(../images/ken-big.png); }
 
 /* ken's fireball */
 .fireball {
@@ -120,31 +120,31 @@ body {
 
 @-webkit-keyframes fireball {
   from {
-    background-position: 0px -320px; }
+    background-position: 0px -800px; }
 
   to {
-    background-position: -140px -320px; } }
+    background-position: -350px -800px; } }
 
 @-moz-keyframes fireball {
   from {
-    background-position: 0px -320px; }
+    background-position: 0px -800px; }
 
   to {
-    background-position: -140px -320px; } }
+    background-position: -350px -800px; } }
 
 @-ms-keyframes fireball {
   from {
-    background-position: 0px -320px; }
+    background-position: 0px -800px; }
 
   to {
-    background-position: -140px -320px; } }
+    background-position: -350px -800px; } }
 
 @keyframes fireball {
   from {
-    background-position: 0px -320px; }
+    background-position: 0px -800px; }
 
   to {
-    background-position: -140px -320px; } }
+    background-position: -350px -800px; } }
 
 /* ken's fireball impact explosion */
 .explode {
@@ -155,31 +155,31 @@ body {
 
 @-webkit-keyframes explode {
   from {
-    background-position: 0px -400px; }
+    background-position: 0px -1000px; }
 
   to {
-    background-position: -280px -400px; } }
+    background-position: -700px -1000px; } }
 
 @-moz-keyframes explode {
   from {
-    background-position: 0px -400px; }
+    background-position: 0px -1000px; }
 
   to {
-    background-position: -280px -400px; } }
+    background-position: -700px -1000px; } }
 
 @-ms-keyframes explode {
   from {
-    background-position: 0px -400px; }
+    background-position: 0px -1000px; }
 
   to {
-    background-position: -280px -400px; } }
+    background-position: -700px -1000px; } }
 
 @keyframes explode {
   from {
-    background-position: 0px -400px; }
+    background-position: 0px -1000px; }
 
   to {
-    background-position: -280px -400px; } }
+    background-position: -700px -1000px; } }
 
 /* stance */
 .stance {
@@ -190,31 +190,31 @@ body {
 
 @-webkit-keyframes stance {
   from {
-    background-position: 0px -80px; }
+    background-position: 0px -200px; }
 
   to {
-    background-position: -280px -80px; } }
+    background-position: -700px -200px; } }
 
 @-moz-keyframes stance {
   from {
-    background-position: 0px -80px; }
+    background-position: 0px -200px; }
 
   to {
-    background-position: -280px -80px; } }
+    background-position: -700px -200px; } }
 
 @-ms-keyframes stance {
   from {
-    background-position: 0px -80px; }
+    background-position: 0px -200px; }
 
   to {
-    background-position: -280px -80px; } }
+    background-position: -700px -200px; } }
 
 @keyframes stance {
   from {
-    background-position: 0px -80px; }
+    background-position: 0px -200px; }
 
   to {
-    background-position: -280px -80px; } }
+    background-position: -700px -200px; } }
 
 /* hadoken - must be declared AFTER .stance */
 .hadoken {
@@ -228,28 +228,28 @@ body {
     background-position: 0px 0px; }
 
   to {
-    background-position: -280px 0px; } }
+    background-position: -700px 0px; } }
 
 @-moz-keyframes hadoken {
   from {
     background-position: 0px 0px; }
 
   to {
-    background-position: -280px 0px; } }
+    background-position: -700px 0px; } }
 
 @-ms-keyframes hadoken {
   from {
     background-position: 0px 0px; }
 
   to {
-    background-position: -280px 0px; } }
+    background-position: -700px 0px; } }
 
 @keyframes hadoken {
   from {
     background-position: 0px 0px; }
 
   to {
-    background-position: -280px 0px; } }
+    background-position: -700px 0px; } }
 
 /* punch */
 .punch {
@@ -260,31 +260,31 @@ body {
 
 @-webkit-keyframes punch {
   from {
-    background-position: 0px -160px; }
+    background-position: 0px -400px; }
 
   to {
-    background-position: -210px -160px; } }
+    background-position: -525px -400px; } }
 
 @-moz-keyframes punch {
   from {
-    background-position: 0px -160px; }
+    background-position: 0px -400px; }
 
   to {
-    background-position: -210px -160px; } }
+    background-position: -525px -400px; } }
 
 @-ms-keyframes punch {
   from {
-    background-position: 0px -160px; }
+    background-position: 0px -400px; }
 
   to {
-    background-position: -210px -160px; } }
+    background-position: -525px -400px; } }
 
 @keyframes punch {
   from {
-    background-position: 0px -160px; }
+    background-position: 0px -400px; }
 
   to {
-    background-position: -210px -160px; } }
+    background-position: -525px -400px; } }
 
 /* walking */
 .walk {
@@ -295,31 +295,31 @@ body {
 
 @-webkit-keyframes walk {
   from {
-    background-position: 0px -240px; }
+    background-position: 0px -600px; }
 
   to {
-    background-position: -350px -240px; } }
+    background-position: -875px -600px; } }
 
 @-moz-keyframes walk {
   from {
-    background-position: 0px -240px; }
+    background-position: 0px -600px; }
 
   to {
-    background-position: -350px -240px; } }
+    background-position: -875px -600px; } }
 
 @-ms-keyframes walk {
   from {
-    background-position: 0px -240px; }
+    background-position: 0px -600px; }
 
   to {
-    background-position: -350px -240px; } }
+    background-position: -875px -600px; } }
 
 @keyframes walk {
   from {
-    background-position: 0px -240px; }
+    background-position: 0px -600px; }
 
   to {
-    background-position: -350px -240px; } }
+    background-position: -875px -600px; } }
 
 /* kick */
 .kick {
@@ -330,31 +330,31 @@ body {
 
 @-webkit-keyframes kick {
   from {
-    background-position: 0px -480px; }
+    background-position: 0px -1200px; }
 
   to {
-    background-position: -350px -480px; } }
+    background-position: -875px -1200px; } }
 
 @-moz-keyframes kick {
   from {
-    background-position: 0px -480px; }
+    background-position: 0px -1200px; }
 
   to {
-    background-position: -350px -480px; } }
+    background-position: -875px -1200px; } }
 
 @-ms-keyframes kick {
   from {
-    background-position: 0px -480px; }
+    background-position: 0px -1200px; }
 
   to {
-    background-position: -350px -480px; } }
+    background-position: -875px -1200px; } }
 
 @keyframes kick {
   from {
-    background-position: 0px -480px; }
+    background-position: 0px -1200px; }
 
   to {
-    background-position: -350px -480px; } }
+    background-position: -875px -1200px; } }
 
 /* reverse kick */
 .reversekick {
@@ -365,31 +365,31 @@ body {
 
 @-webkit-keyframes reversekick {
   from {
-    background-position: 0px -560px; }
+    background-position: 0px -1400px; }
 
   to {
-    background-position: -350px -560px; } }
+    background-position: -875px -1400px; } }
 
 @-moz-keyframes reversekick {
   from {
-    background-position: 0px -560px; }
+    background-position: 0px -1400px; }
 
   to {
-    background-position: -350px -560px; } }
+    background-position: -875px -1400px; } }
 
 @-ms-keyframes reversekick {
   from {
-    background-position: 0px -560px; }
+    background-position: 0px -1400px; }
 
   to {
-    background-position: -350px -560px; } }
+    background-position: -875px -1400px; } }
 
 @keyframes reversekick {
   from {
-    background-position: 0px -560px; }
+    background-position: 0px -1400px; }
 
   to {
-    background-position: -350px -560px; } }
+    background-position: -875px -1400px; } }
 
 /* kneel down */
 .kneel {
@@ -400,31 +400,31 @@ body {
 
 @-webkit-keyframes kneel {
   from {
-    background-position: 0px -720px; }
+    background-position: 0px -1800px; }
 
   to {
-    background-position: -70px -720px; } }
+    background-position: -175px -1800px; } }
 
 @-moz-keyframes kneel {
   from {
-    background-position: 0px -720px; }
+    background-position: 0px -1800px; }
 
   to {
-    background-position: -70px -720px; } }
+    background-position: -175px -1800px; } }
 
 @-ms-keyframes kneel {
   from {
-    background-position: 0px -720px; }
+    background-position: 0px -1800px; }
 
   to {
-    background-position: -70px -720px; } }
+    background-position: -175px -1800px; } }
 
 @keyframes kneel {
   from {
-    background-position: 0px -720px; }
+    background-position: 0px -1800px; }
 
   to {
-    background-position: -70px -720px; } }
+    background-position: -175px -1800px; } }
 
 /* jump */
 .jump {
@@ -442,31 +442,31 @@ body {
 
 @-webkit-keyframes jump {
   from {
-    background-position: 0px -640px; }
+    background-position: 0px -1600px; }
 
   to {
-    background-position: -490px -640px; } }
+    background-position: -1225px -1600px; } }
 
 @-moz-keyframes jump {
   from {
-    background-position: 0px -640px; }
+    background-position: 0px -1600px; }
 
   to {
-    background-position: -490px -640px; } }
+    background-position: -1225px -1600px; } }
 
 @-ms-keyframes jump {
   from {
-    background-position: 0px -640px; }
+    background-position: 0px -1600px; }
 
   to {
-    background-position: -490px -640px; } }
+    background-position: -1225px -1600px; } }
 
 @keyframes jump {
   from {
-    background-position: 0px -640px; }
+    background-position: 0px -1600px; }
 
   to {
-    background-position: -490px -640px; } }
+    background-position: -1225px -1600px; } }
 
 /* shoryuken */
 .shoryuken {
@@ -489,28 +489,28 @@ body {
     background-position: 0px 0px; }
 
   to {
-    background-position: -490px 0px; } }
+    background-position: -1225px 0px; } }
 
 @-moz-keyframes shoryuken {
   from {
     background-position: 0px 0px; }
 
   to {
-    background-position: -490px 0px; } }
+    background-position: -1225px 0px; } }
 
 @-ms-keyframes shoryuken {
   from {
     background-position: 0px 0px; }
 
   to {
-    background-position: -490px 0px; } }
+    background-position: -1225px 0px; } }
 
 @keyframes shoryuken {
   from {
     background-position: 0px 0px; }
 
   to {
-    background-position: -490px 0px; } }
+    background-position: -1225px 0px; } }
 
 /* tatsumaki senpuu kyaku */
 .tatsumaki {
@@ -533,28 +533,28 @@ body {
     background-position: 0px 0px; }
 
   to {
-    background-position: -910px 0px; } }
+    background-position: -2275px 0px; } }
 
 @-moz-keyframes tatsumaki {
   from {
     background-position: 0px 0px; }
 
   to {
-    background-position: -910px 0px; } }
+    background-position: -2275px 0px; } }
 
 @-ms-keyframes tatsumaki {
   from {
     background-position: 0px 0px; }
 
   to {
-    background-position: -910px 0px; } }
+    background-position: -2275px 0px; } }
 
 @keyframes tatsumaki {
   from {
     background-position: 0px 0px; }
 
   to {
-    background-position: -910px 0px; } }
+    background-position: -2275px 0px; } }
 
 .guile {
   position: absolute;
