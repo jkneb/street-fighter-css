@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Street Fighter II in CSS</title>
     <meta name="author" content="jkneb">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -10,38 +10,25 @@
     
     <div class="stage">
         <div class="ken stance"></div>
-        <div class="guile stance2 flip"></div>
+    </div>
 
-        <a class="pause"></a>
+    <div class="commands">
+        <h1>Control Ken with ur keyboard</h1>
+
+        Punch: <button id="a">a</button><br>
+        Kick: <button id="z">z</button><br>
+        Reverse kick: <button id="e">e</button><br>
+        <br>
+        Tatsumaki: <button id="q">q</button><br>
+        Hadoken: <button id="s">s</button><br>
+        Shoryuken: <button id="d">d</button><br>
+        <br>
+        Jump: &nbsp;&nbsp;&nbsp;<button id="up">▲</button><br>
+        Walk: <button id="left">◀</button><button id="right">►</button><br>
+        Kneel: &nbsp;&nbsp;<button id="down">▼</button>
     </div>
     
-    
-    
-    
-    
-    
-    <table class="commands">
-        <tr>
-            <td>Punch <span class="key">a</span>
-            <td>Kick <span class="key">z</span>
-            <td>Jump &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">▲</span>
-        <tr>
-            <td>Shoryuken <span class="key">d</span>
-            <td>Reverse kick <span class="key">e</span>
-            <td>Walk <span class="key">◀</span> <span class="key">►</span> <!--▲▼◀►-->
-        <tr>
-            <td>Hadoken <span class="key">s</span>
-            <td>Tatsumaki Senpuu Kyaku <span class="key">q</span>
-            <td>Kneel &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">▼</span>
-        <tr>
-            <td>
-            <td>
-            <td>
-    </table>
-    
-<script src="js/jquery.min.js"></script>
-<script src="js/soundmanager2-jsmin.js"></script>
-<script src="js/audio.js"></script>
-<script src="js/ken.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/ken.js"></script>
 </body>
 </html>
