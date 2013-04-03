@@ -3,14 +3,15 @@
 @import url(http://fonts.googleapis.com/css?family=Bangers);
 
 // debug mode
-// .stage * { outline:1px solid pink; }
+.stage, .stage * { outline:1px solid pink; }
 
 body { background-color:black; margin:0; }
 
 .stage { 
-    width:1024px; height:400px; margin:0 auto; overflow:hidden; position:relative; z-index:0;
+    width:450px; height:330px; margin:0 auto; overflow:hidden; position:relative; z-index:0;
     //background:url(../images/bg.jpg) no-repeat; 
-    background:url(../images/bg2.jpg) no-repeat bottom center; 
+    background:url(../images/bg2.jpg) no-repeat 0px -100px;
+    background-size:contain;
 }
 .pause {
     position:absolute; right:5px; bottom:5px; width:20px; height:20px; 
@@ -27,26 +28,24 @@ body { background-color:black; margin:0; }
     @include box-shadow(inset 0 5px 15px rgba(0,0,0,.4));
 }
 
-.obstacle { width:70px; height:100px; position:absolute; bottom:35px; right:400px; }
-
 // element who's going to receive this class will be reversed / mirrored :)
 .flip { @include transform(scaleX(-1)); }
 
 // sprite dimensions
-$spriteWidth:70px * 2.5;
-$spriteHeight:80px * 2.5;
+$spriteWidth:70px;
+$spriteHeight:80px;
 
 // ken character
 .ken { 
-    position:absolute; bottom:35px; margin-left:210px;
+    position:absolute; bottom:112px; margin-left:90px;
     width:$spriteWidth; height:$spriteHeight; 
-    background-image:url(../images/ken-big.png); 
+    background-image:url(../images/ken.png); 
     
     // shadow
     &:before { 
-        //content:''; z-index:-1; position:absolute; bottom:-2px; left:17px; right:17px; 
-        //height:6px; background-color:rgba(0,0,0,.4); 
-        //@include border-radius(50%); @include box-shadow(0 0 5px);
+        content:''; z-index:-1; position:absolute; bottom:-2px; left:17px; right:17px; 
+        height:6px; background-color:rgba(0,0,0,.4); 
+        @include border-radius(50%); @include box-shadow(0 0 5px);
     }
 }
 
@@ -79,24 +78,24 @@ $spriteHeight:80px * 2.5;
 /* jump */
 @include anim($animName:jump, $steps:7, $animNbr:9, $animParams:1s infinite) {
     @include transition(bottom .5s cubic-bezier(0.990, 0.005, 0.000, 0.420));
-    bottom:150px;
-    &.down { bottom:45px; }
+    bottom:225px;
+    &.down { bottom:112px; }
 }
 /* shoryuken */
 @include anim($animName:shoryuken, $steps:7, $animNbr:1, $animParams:1s infinite) {
     height:110px;
     background-image:url(../images/ken-shoryuken.png);
     @include transition(bottom .5s cubic-bezier(0.990, 0.005, 0.000, 0.420));
-    bottom:200px;
-    &.down { bottom:45px; }
+    bottom:225px;
+    &.down { bottom:112px; }
 }
 /* tatsumaki senpuu kyaku */
 @include anim($animName:tatsumaki, $steps:13, $animNbr:1, $animParams:2s infinite) {
     height:110px;
     background-image:url(../images/ken-tatsumaki-senpuu-kyaku.png);
     @include transition(bottom .2s cubic-bezier(0.990, 0.005, 0.000, 0.420));
-    bottom:60px;
-    &.down { bottom:45px; }
+    bottom:132px;
+    &.down { bottom:112px; }
 }
 
 
@@ -104,7 +103,7 @@ $spriteWidth:70px;
 $spriteHeight:90px;
 
 .guile { 
-    position:absolute; bottom:35px; margin-left:410px;
+    position:absolute; bottom:112px; margin-left:280px;
     width:$spriteWidth; height:$spriteHeight; 
     background-image:url(../images/guile.png); 
 }
