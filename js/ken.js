@@ -16,6 +16,7 @@ var isColision = function(){
     return ($guilePos.left - $kenPos.left <= 75 && $guilePos.left - $kenPos.left >= -75) ? true : false;
 };
 
+
 // moves
 // ----------------------------------- \
 var punch = function(){
@@ -139,6 +140,30 @@ var walkLeft = function(){
 var walkRight = function(){
     $ken.addClass('walk').css({ marginLeft:'+=10px' });
 };
+
+
+// on click events
+// -----------------------------------
+$('#a').click(punch);
+$('#z').click(kick);
+$('#e').click(rkick);
+$('#q').click(tatsumaki);
+$('#s').click(hadoken);
+$('#d').click(shoryuken);
+$('#up').click(jump);
+$('#down').on('mousedown mouseup', function(e){
+    if (e.type == 'mousedown') { kneel(); }
+    else { $ken.removeClass('kneel'); }
+});
+$('#left').on('mousedown mouseup', function(e){
+    if (e.type == 'mousedown') { walkLeft(); }
+    else { $ken.removeClass('walk'); }
+});
+$('#right').on('mousedown mouseup', function(e){
+    if (e.type == 'mousedown') { walkRight(); }
+    else { $ken.removeClass('walk'); }
+});
+
 
 // on keydown events
 // ----------------------------------- 
